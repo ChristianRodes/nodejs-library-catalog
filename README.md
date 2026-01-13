@@ -1,31 +1,119 @@
-# Node.js Library Catalog
+📚 Mi Biblioteca – React Library Catalog
 
-Practice project developed in Node.js that simulates a library with a book catalog.
-It allows managing books using a modular and object-oriented structure.
+Aplicación web desarrollada con React que permite visualizar un catálogo de libros, navegar entre distintas páginas y consultar el detalle de cada libro de forma dinámica.
 
-## 🛠️ Technologies Used
-- Node.js
-- JavaScript (ES6)
-- CommonJS modules
-- npm
+El proyecto forma parte de las prácticas de la asignatura DAW – Frontend, y está dividido en varias sesiones incrementales.
 
-## 🎯 Project Goal
-The goal of this project is to practice and consolidate:
-- Core Node.js usage without frameworks
-- Code organization using modules
-- Object-Oriented Programming (OOP)
-- In-memory data management
-- Application flow starting from a main entry point (`index.js`)
+🚀 Tecnologías utilizadas
 
-## 📦 Features
-- Add books to the catalog
-- List available books
-- Structure a library using classes and modules
+React (con Vite)
 
-## ▶️ How to Run the Project
-1. Clone the repository
-2. Install dependencies (if applicable)
-3. Run the project:
+React Router DOM (navegación entre páginas)
 
-```bash
-node index.js
+CSS modular (estilos por componente)
+
+JSON local como fuente de datos
+
+Font Awesome (iconos)
+
+🧩 Funcionalidades
+✔ Listado de libros
+
+Visualización de libros a partir de un archivo biblioteca.json
+
+Diseño responsive:
+
+Desktop: varios libros por fila
+
+Tablet: 3 libros
+
+Móvil: 1 libro
+
+Efecto visual al pasar el ratón (:hover)
+
+✔ Navegación
+
+Menú de navegación persistente:
+
+Inicio
+
+Crear libro
+
+Buscar libros
+
+Uso de React Router sin recargar la página
+
+✔ Detalle de libro
+
+Al hacer clic sobre un libro se accede a su página de detalle
+
+La URL incluye el identificador del libro (/mostrar/:id)
+
+Se muestra:
+
+Portada
+
+Título
+
+Autor
+
+Sinopsis
+
+Botón para volver atrás
+
+Layout responsive y centrado
+
+✔ Estructura de la aplicación
+
+Componentes reutilizables
+
+Separación entre:
+
+Componentes visuales
+
+Páginas
+
+Estilos
+
+Layout común (cabecera, navegación y pie de página)
+
+📁 Estructura del proyecto
+src/
+├── assets/
+│   └── bbdd/
+│       └── biblioteca.json
+├── componentes/
+│   ├── estructura/
+│   ├── Libro.jsx
+│   ├── LibroDetalles.jsx
+│   └── ListadoLibros.jsx
+├── paginas/
+│   ├── Inicio.jsx
+│   ├── Crear.jsx
+│   ├── Buscar.jsx
+│   ├── Mostrar.jsx
+│   └── Error.jsx
+├── Rutas.jsx
+├── App.jsx
+└── main.jsx
+
+▶️ Ejecución del proyecto
+
+Instalar dependencias:
+
+npm install
+
+
+Ejecutar el servidor de desarrollo:
+
+npm run dev
+
+
+Abrir en el navegador:
+
+http://localhost:5173
+
+📝 Autor
+
+Proyecto realizado por [Tu nombre]
+Asignatura: Desarrollo de Aplicaciones Web (DAW)
