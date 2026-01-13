@@ -1,10 +1,10 @@
-📚 Mi Biblioteca – React Library Catalog
+##📚 Mi Biblioteca – React Library Catalog
 
 Aplicación web desarrollada con React que permite visualizar un catálogo de libros, navegar entre distintas páginas y consultar el detalle de cada libro de forma dinámica.
 
 El proyecto forma parte de las prácticas de la asignatura DAW – Frontend, y está dividido en varias sesiones incrementales.
 
-🚀 Tecnologías utilizadas
+##🚀 Tecnologías utilizadas
 
 React (con Vite)
 
