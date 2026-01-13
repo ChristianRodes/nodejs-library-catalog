@@ -1,10 +1,10 @@
-##📚 Mi Biblioteca – React Library Catalog
+# 📚 Mi Biblioteca – React Library Catalog
 
 Aplicación web desarrollada con React que permite visualizar un catálogo de libros, navegar entre distintas páginas y consultar el detalle de cada libro de forma dinámica.
 
 El proyecto forma parte de las prácticas de la asignatura DAW – Frontend, y está dividido en varias sesiones incrementales.
 
-##🚀 Tecnologías utilizadas
+# 🚀 Tecnologías utilizadas
 
 React (con Vite)
 
@@ -16,8 +16,8 @@ JSON local como fuente de datos
 
 Font Awesome (iconos)
 
-🧩 Funcionalidades
-✔ Listado de libros
+# 🧩 Funcionalidades
+## ✔ Listado de libros
 
 Visualización de libros a partir de un archivo biblioteca.json
 
@@ -31,7 +31,7 @@ Móvil: 1 libro
 
 Efecto visual al pasar el ratón (:hover)
 
-✔ Navegación
+## ✔ Navegación
 
 Menú de navegación persistente:
 
@@ -43,7 +43,7 @@ Buscar libros
 
 Uso de React Router sin recargar la página
 
-✔ Detalle de libro
+## ✔ Detalle de libro
 
 Al hacer clic sobre un libro se accede a su página de detalle
 
@@ -63,7 +63,7 @@ Botón para volver atrás
 
 Layout responsive y centrado
 
-✔ Estructura de la aplicación
+## ✔ Estructura de la aplicación
 
 Componentes reutilizables
 
