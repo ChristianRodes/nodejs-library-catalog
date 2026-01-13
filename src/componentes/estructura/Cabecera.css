@@ -1,0 +1,16 @@
+.cabecera {
+  padding: 40px 0 20px;
+}
+
+.cabecera__contenedor {
+  max-width: var(--default-size);
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+.cabecera__titulo {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  color: #555;
+}

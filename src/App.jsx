@@ -1,11 +1,18 @@
-import ListadoLibros from "./componentes/ListadoLibros"
+import { BrowserRouter } from "react-router-dom"
+
+import Cabecera from "./componentes/estructura/Cabecera"
+import Navegacion from "./componentes/estructura/Navegacion"
+import PiePagina from "./componentes/estructura/PiePagina"
+import Rutas from "./Rutas"
 
 function App() {
   return (
-    <main>
-      <h1>Biblioteca</h1>
-      <ListadoLibros />
-    </main>
+    <BrowserRouter>
+      <Cabecera />
+      <Navegacion />
+      <Rutas />
+      <PiePagina />
+    </BrowserRouter>
   )
 }
 

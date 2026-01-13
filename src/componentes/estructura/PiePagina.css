@@ -1,0 +1,14 @@
+.pie-pagina {
+  background-color: var(--bg-color);
+}
+
+.pie-pagina__texto {
+  max-width: var(--default-size);
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}

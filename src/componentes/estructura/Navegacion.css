@@ -1,0 +1,28 @@
+.navegacion {
+  background-color: #f5f5f5;
+  padding: 15px 0;
+}
+
+.navegacion__lista {
+  max-width: var(--default-size);
+  margin: 0 auto;
+  padding: 0;
+
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navegacion__lista a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+}
+
+.navegacion__lista a.active {
+  background-color: #666;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+}

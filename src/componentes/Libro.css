@@ -1,0 +1,40 @@
+.libro {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.libro:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  background-color: #f7f7f7;
+}
+
+.libro__imagen {
+  width: 100%;
+  max-width: 160px;
+  margin: 0 auto;
+  display: block;
+}
+
+.libro__titulo {
+  font-size: 1.1rem;
+  margin: 5px 0 0;
+  text-align: center;
+}
+
+.libro__autor {
+  font-size: 0.95rem;
+  font-style: italic;
+  margin: 0;
+  text-align: center;
+}
+
+.libro__link{
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,25 +1,23 @@
-import sinPortada from "../assets/img/sin_portada.png";
+import { Link } from "react-router-dom"
+import "./Libro.css"
+import sinPortada from "../assets/img/sin_portada.png"
 
 const Libro = ({ libro }) => {
-  const {
-    id,
-    titulo = "No se ha especificado título",
-    autor = "No se ha especificado autor",
-    portada
-  } = libro;
+  const { id, titulo, autor, portada } = libro
 
   return (
-    <article id={id}>
-      <img
-        src={portada ? portada : sinPortada}
-        alt={`Portada de ${titulo}`}
-        width="150"
-        height="225"
-      />
-      <h3>{titulo}</h3>
-      <p>{autor}</p>
-    </article>
-  );
-};
+    <Link to={`/mostrar/${id}`} className="libro__link">
+      <article className="libro">
+        <img
+          className="libro__imagen"
+          src={portada || sinPortada}
+          alt={`Portada de ${titulo}`}
+        />
+        <h3 className="libro__titulo">{titulo}</h3>
+        <p className="libro__autor">{autor}</p>
+      </article>
+    </Link>
+  )
+}
 
-export default Libro;
+export default Libro

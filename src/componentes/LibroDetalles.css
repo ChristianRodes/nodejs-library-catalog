@@ -1,0 +1,52 @@
+.libro-detalles {
+  max-width: var(--default-size);
+  margin: 60px auto;          /* centra el bloque en la página */
+  padding: 0 20px;
+
+  display: flex;
+  gap: 50px;
+  justify-content: center;    /* clave para centrar */
+  align-items: flex-start;
+}
+
+.libro-detalles__imagen {
+  width: 260px;
+  flex-shrink: 0;
+}
+
+.libro-detalles__contenido {
+  max-width: 600px;
+}
+
+.libro-detalles__contenido h2 {
+  margin-top: 0;
+}
+
+.libro-detalles__autor {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.libro-detalles__sinopsis {
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.libro-detalles__acciones {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .libro-detalles {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .libro-detalles__contenido {
+    max-width: 100%;
+  }
+}
