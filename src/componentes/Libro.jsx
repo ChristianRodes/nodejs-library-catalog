@@ -1,9 +1,14 @@
-import { Link } from "react-router-dom"
-import "./Libro.css"
-import sinPortada from "../assets/img/sin_portada.png"
+import { Link } from "react-router-dom";
+import "./Libro.css";
+import sinPortada from "../assets/img/sin_portada.png";
 
-const Libro = ({ libro }) => {
-  const { id, titulo, autor, portada } = libro
+const Libro = ({ datos }) => {
+  
+
+  if (!datos) return null;
+
+
+  const { id, titulo, autor, portada } = datos;
 
   return (
     <Link to={`/mostrar/${id}`} className="libro__link">
@@ -17,7 +22,7 @@ const Libro = ({ libro }) => {
         <p className="libro__autor">{autor}</p>
       </article>
     </Link>
-  )
-}
+  );
+};
 
-export default Libro
+export default Libro;

@@ -1,16 +1,32 @@
-import { useParams, useNavigate } from "react-router-dom"
-import biblioteca from "../assets/bbdd/biblioteca.json"
-import "./LibroDetalles.css"
+import React, { useContext } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { ContextoLibros } from "../contextos/ProveedorLibros";
+import "./LibroDetalles.css";
 
 const LibroDetalles = () => {
-  const { id } = useParams()
-  const navigate = useNavigate()
+  const { id } = useParams();
+  const navegar = useNavigate(); // Para redirigir tras borrar
 
-  const libro = biblioteca.libros.find((libro) => libro.id === id)
+  // Sacamos los datos y la función de borrar del contexto
+  const { biblioteca, eliminarLibro } = useContext(ContextoLibros);
 
+  // Buscamos el libro en el array global
+  const libro = biblioteca.find((l) => l.id === id);
+
+  // Si el libro no existe (porque se ha borrado o el ID es malo)
   if (!libro) {
-    return <p>Libro no encontrado</p>
+    return (
+      <div className="libro-detalles">
+        <p>El libro no existe o ha sido eliminado.</p>
+        <button onClick={() => navegar("/")}>Volver al inicio</button>
+      </div>
+    );
   }
+
+  const handleEliminar = () => {
+    eliminarLibro(id); // Borramos del estado global
+    navegar("/");      // Redirigimos al inicio automáticamente
+  };
 
   return (
     <article className="libro-detalles">
@@ -26,12 +42,14 @@ const LibroDetalles = () => {
         <p className="libro-detalles__sinopsis">{libro.sinopsis}</p>
 
         <div className="libro-detalles__acciones">
-          <button>Eliminar</button>
-          <button onClick={() => navigate("/")}>← Atrás</button>
+          <button className="boton-eliminar" onClick={handleEliminar}>
+            Eliminar Libro
+          </button>
+          <button onClick={() => navegar("/")}>← Atrás</button>
         </div>
       </div>
     </article>
-  )
-}
+  );
+};
 
-export default LibroDetalles
+export default LibroDetalles;
